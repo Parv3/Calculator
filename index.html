@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="calc" aria-label="Calculator">
+        <header class="calc__header">
+          <h1 class="calc__title">Calculator</h1>
+          <p class="calc__hint">
+            Keyboard: digits, <kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd>,
+            <kbd>.</kbd>, <kbd>Enter</kbd>, <kbd>Backspace</kbd>, <kbd>Esc</kbd>
+          </p>
+        </header>
+
+        <div class="display" aria-live="polite">
+          <div class="display__expr" id="expr" aria-label="Expression"></div>
+          <output class="display__value" id="value" aria-label="Value">0</output>
+        </div>
+
+        <div class="keys" role="group" aria-label="Calculator keys">
+          <button class="key key--secondary" data-action="clear" type="button">AC</button>
+          <button class="key key--secondary" data-action="sign" type="button">±</button>
+          <button class="key key--secondary" data-action="percent" type="button">%</button>
+          <button class="key key--op" data-input="/" type="button">÷</button>
+
+          <button class="key" data-input="7" type="button">7</button>
+          <button class="key" data-input="8" type="button">8</button>
+          <button class="key" data-input="9" type="button">9</button>
+          <button class="key key--op" data-input="*" type="button">×</button>
+
+          <button class="key" data-input="4" type="button">4</button>
+          <button class="key" data-input="5" type="button">5</button>
+          <button class="key" data-input="6" type="button">6</button>
+          <button class="key key--op" data-input="-" type="button">−</button>
+
+          <button class="key" data-input="1" type="button">1</button>
+          <button class="key" data-input="2" type="button">2</button>
+          <button class="key" data-input="3" type="button">3</button>
+          <button class="key key--op" data-input="+" type="button">+</button>
+
+          <button class="key key--secondary" data-action="backspace" type="button">⌫</button>
+          <button class="key key--wide" data-input="0" type="button">0</button>
+          <button class="key" data-input="." type="button">.</button>
+          <button class="key key--equals" data-action="equals" type="button">=</button>
+        </div>
+
+        <footer class="calc__footer">
+          <small>Tip: you can paste an expression like <code>12.5*(3-1)</code>.</small>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
